@@ -1,16 +1,33 @@
-# demo_project
+In this Project we can create AC remote with BLE Implementation. 
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Installation
+First make sure you have a Flutter SDK installed. if not install it by Flutter SDK v3.10.3.
+Clone this repository, checkout to the main branch.
+For vsCode Configuration
+Under launch.json file on vsCode and update below environment variables under configurations.
+{
+"version": "0.2.0",
+"configurations": [
+{
+"name": "demo-flutter",
+"request": "launch",
+"type": "dart",
+"program": "lib/flavor/main_dev.dart"
+},
+{
+"name": "demo-flutter (profile mode)",
+"request": "launch",
+"type": "dart",
+"flutterMode": "profile"
+},
+{
+"name": "demo-flutter (release mode)",
+"request": "launch",
+"type": "dart",
+"program": "lib/flavor/main_prod.dart"
+}
+]
+}
+For Android Studio Configuration
+Open Run Configuration and add(+) new configuration with flutter.
+on dart entrypoint add your project lib/flavor/main_dev.dart path.
